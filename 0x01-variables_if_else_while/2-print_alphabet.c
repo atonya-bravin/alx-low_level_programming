@@ -7,5 +7,6 @@ int main(void)
 	{
 		putchar(letter_count);
 	}
+	putchar('\n');
 	return (0);
 }
