@@ -5,7 +5,8 @@
 /**
  * main - Entry point
  *
- * Description: 'the program generates a number then decides whether the number is positive, negative or equal to 0
+ * Description: 'the program generates a number then 
+ * decides whether the number is positive, negative or equal to 0'
  *
  * Return: Always 0 (success)
  */
