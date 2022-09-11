@@ -3,9 +3,10 @@
 /**
  * main - Entry point
  *
- * Description: 'this program prints all base 10 numbers
+ * Description: 'This program prints base 16 numbers in lowercase'
  *
  * Return: Always 0 (Success)
+ *
  */
 
 int main(void)
@@ -17,9 +18,15 @@ int main(void)
 			first_character_number <= last_character_number;
 			first_character_number++)
 	{
-		putchar(first_character_number % 10 + '0');
+		putchar(first_character_number);
+	}
+	last_character_number = 102;
+	for (first_character_number = 97;
+			first_character_number <= last_character_number;
+			first_character_number++)
+	{
+		putchar(first_character_number);
 	}
 	putchar('\n');
-
 	return (0);
 }
