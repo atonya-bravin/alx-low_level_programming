@@ -17,7 +17,7 @@ int main(void)
 			first_character_number <= last_character_number;
 			first_character_number++)
 	{
-		putchar(first_character_number % 10 + '0');
+		putchar(first_character_number);
 	}
 	putchar('\n');
 
