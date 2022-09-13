@@ -1,4 +1,5 @@
-#include <_putchar.h>
+#include "main.h"
+
 /**
  * main - Entry point
  *
@@ -13,7 +14,7 @@ int main(void)
 	int string_size = (int)(sizeof(output));
 	int character_counter;
 
-	for (character_counter = 0; charcter_counter < string_size; character_counter++)
+	for (character_counter = 0; character_counter < string_size; character_counter++)
 	{
 		_putchar(output[character_counter]);
 	}
