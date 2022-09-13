@@ -11,10 +11,12 @@
 int main(void)
 {
 	char output[] = "_putchar";
-	int string_size = (int)(sizeof(output));
+	int string_size =(int)(sizeof(output) / sizeof(output[0]));
 	int character_counter;
 
-	for (character_counter = 0; character_counter < string_size; character_counter++)
+	for (character_counter = 0;
+			character_counter < (string_size - 1);
+			character_counter++)
 	{
 		_putchar(output[character_counter]);
 	}
