@@ -20,14 +20,18 @@ int main(void)
 	while (numberCounter <= last_number)
 	{
 		if ((numberCounter % 3) == 0)
-			printf("%s ", "Fizz");
+			printf("%s", "Fizz");
 		else if ((numberCounter % 5) == 0)
-			printf("%s ", "Buzz");
+			printf("%s", "Buzz");
 		else if (((numberCounter % 3) == 0) && ((numberCounter % 5) == 0))
-			printf("%s ", "FizzBuzz");
+			printf("%s", "FizzBuzz");
 		else
-			printf("%d ", numberCounter);
+			printf("%d", numberCounter);
+
+		if (numberCounter < last_number)
+			putchar(' ');
 		numberCounter++;
 	}
+	putchar('\n');
 	return (0);
 }
