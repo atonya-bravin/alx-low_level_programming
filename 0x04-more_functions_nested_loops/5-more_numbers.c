@@ -17,15 +17,9 @@ void more_numbers(void)
 	{
 		for (numberCounter = 0; numberCounter < 15; numberCounter++)
 		{
-			if (numberCounter < 10)
-			{
-				_putchar((numberCounter % 10) + '0');
-			}
-			else
-			{
+			if (numberCounter > 10)
 				_putchar(((numberCounter - (numberCounter % 10)) / 10) + '0');
-				_putchar((numberCounter % 10) + '0');
-			}
+			_putchar((numberCounter % 10) + '0');
 		}
 		_putchar('\n');
 	}
