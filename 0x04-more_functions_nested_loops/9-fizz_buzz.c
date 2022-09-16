@@ -19,9 +19,9 @@ int main(void)
 
 	while (numberCounter <= last_number)
 	{
-		if ((numberCounter % 3) == 0)
+		if (((numberCounter % 3) == 0) && ((numberCounter % 5) != 0))
 			printf("%s", "Fizz");
-		else if ((numberCounter % 5) == 0)
+		else if (((numberCounter % 5) == 0) && ((numberCounter % 3) != 0))
 			printf("%s", "Buzz");
 		else if (((numberCounter % 3) == 0) && ((numberCounter % 5) == 0))
 			printf("%s", "FizzBuzz");
