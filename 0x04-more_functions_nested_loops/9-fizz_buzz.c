@@ -29,6 +29,5 @@ int main(void)
 			printf("%d ", numberCounter);
 		numberCounter++;
 	}
-	putchar('\n');
 	return (0);
 }
