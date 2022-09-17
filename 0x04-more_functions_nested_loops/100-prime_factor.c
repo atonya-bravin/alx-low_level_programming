@@ -19,7 +19,7 @@ int main(void)
 
 	while (prime_factor_number <= number)
 	{
-		if((number % prime_factor_number) == 0)
+		if ((number % prime_factor_number) == 0)
 		{
 			if (prime_factor_number > largest_prime_factor)
 			{
