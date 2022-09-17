@@ -10,16 +10,13 @@
 
 int main(void)
 {
-	int first_character_number;
-	int last_character_number = 57;
+	int first_number = 1;
+	int last_number = 10;
 
-	for (first_character_number = 48;
-			first_character_number <= last_character_number;
-			first_character_number++)
+	for (first_number = 1; first_number < last_number; first_number++)
 	{
-		putchar(first_character_number);
+		putchar(first_number + '0');
 	}
 	putchar('\n');
-
 	return (0);
 }
