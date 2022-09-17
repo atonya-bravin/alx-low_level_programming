@@ -10,10 +10,10 @@
 
 int main(void)
 {
-	int first_number = 1;
+	int first_number;
 	int last_number = 10;
 
-	for (first_number = 1; first_number < last_number; first_number++)
+	for (first_number = 0; first_number < last_number; first_number++)
 	{
 		putchar(first_number + '0');
 	}
