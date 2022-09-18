@@ -10,28 +10,25 @@
 
 int main(void)
 {
-	int firstCombo_first_character_number;
-	int secondCombo_first_character_number;
-	int firstCombo_last_character_number = 57;
-	int secondCombo_last_character_number = 57;
-	
-	for (firstCombo_first_character_number = 48;
-			firstCombo_first_character_number < firstCombo_last_character_number;
-			firstCombo_first_character_number++)
+	int first_number_counter;
+	int second_number_counter;
+
+	for (first_number_counter = 0;
+			first_number_counter < 10;
+			first_number_counter++)
 	{
-		for (secondCombo_first_character_number = 48;
-				secondCombo_first_character_number <= secondCombo_last_character_number;
-				++secondCombo_first_character_number)
-		{	
-			putchar(firstCombo_first_character_number);
-			putchar(secondCombo_first_character_number);
-			if (firstCombo_first_character_number < firstCombo_last_character_number)
+		for (second_number_counter = first_number_counter + 1;
+				second_number_counter < 10;
+				second_number_counter++)
+		{
+			putchar(first_number_counter + '0');
+			putchar(second_number_counter + '0');
+			if (first_number_counter < 8)
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
-		secondCombo_first_character_number++;
 	}
 	putchar('\n');
 	return (0);
