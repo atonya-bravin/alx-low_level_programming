@@ -15,17 +15,17 @@
 void rev_string(char *s)
 {
 	int string_length = 0;
+	char temp;
+	int character_counter = 0;
 
 	while (s[string_length] != '\0')
 		string_length++;
 
-	string_length--;
-
-	while (string_length >= 0)
+	while (character_counter < string_length / 2)
 	{
-		putchar(s[string_length]);
-		string_length--;
+		temp = s[(string_length - character_counter) - 1];
+		s[(string_length - character_counter) - 1] = s[character_counter];
+		s[character_counter] = temp;	
+		character_counter++;
 	}
-	putchar('\n');
-	exit(0);
 }
