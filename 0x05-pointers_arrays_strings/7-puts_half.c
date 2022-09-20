@@ -3,7 +3,7 @@
 /**
  *puts_half - prints a string to stdout
  *
- * Description: takes in a string and prints characters to screen one by one
+ * Description: takes in a string and prints half of it
  *
  * @str: string pointer
  *
@@ -23,7 +23,7 @@ void puts_half(char *str)
 
 	half_string_character_counter = string_length / 2;
 
-	while (half_string_character_counter <= string_length)
+	while (half_string_character_counter < string_length)
 	{
 		_putchar(str[half_string_character_counter]);
 		half_string_character_counter++;
