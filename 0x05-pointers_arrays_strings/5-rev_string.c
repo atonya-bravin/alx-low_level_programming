@@ -25,7 +25,7 @@ void rev_string(char *s)
 	{
 		temp = s[(string_length - character_counter) - 1];
 		s[(string_length - character_counter) - 1] = s[character_counter];
-		s[character_counter] = temp;	
+		s[character_counter] = temp;
 		character_counter++;
 	}
 }
