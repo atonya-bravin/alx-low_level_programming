@@ -16,6 +16,7 @@ char *_strcpy(char *dest, char *src)
 {
 	int string_length;
 	int character_counter;
+	char tmp;
 
 	for (character_counter = 0; src[character_counter] !=
 			'\0'; character_counter++)
@@ -25,7 +26,10 @@ char *_strcpy(char *dest, char *src)
 
 	for (character_counter = 0; character_counter <
 			string_length; character_counter++)
-		dest[character_counter] = src[character_counter];
-
+	{
+		tmp = src[character_counter];
+		dest[character_counter] = tmp;
+	
+	}
 	return (dest);
 }
