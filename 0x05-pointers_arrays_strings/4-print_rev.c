@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_rev - prints string in reverse
+ * print_rev -prints string in reverse
  *
- * Description: takes in a string and prints it in revers
+ * Description: takes in a string and prints it in reverse
  *
  * @s: string pointer
  *
@@ -22,5 +22,4 @@ void print_rev(char *s)
 		_putchar(s[string_length]);
 		string_length--;
 	}
-	_putchar('\n');
 }
