@@ -19,7 +19,7 @@ void puts_half(char *str)
 	while (str[character_counter] != '\0')
 		character_counter++;
 
-	string_length = character_counter--;
+	string_length = character_counter;
 
 	half_string_character_counter = string_length / 2;
 
