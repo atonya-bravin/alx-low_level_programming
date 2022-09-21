@@ -25,7 +25,7 @@ char *_strcpy(char *dest, char *src)
 		string_length++;
 	}
 	string_length++;
-	for (character_counter = 0; character_counter  <=
+	for (character_counter = 0; character_counter  <
 			string_length; character_counter++)
 	{
 		tmp = src[character_counter];
