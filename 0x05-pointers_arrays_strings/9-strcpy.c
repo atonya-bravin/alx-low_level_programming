@@ -14,7 +14,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	
+
 	int string_length = 0;
 	int character_counter;
 	char tmp;
