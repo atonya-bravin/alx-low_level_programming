@@ -20,8 +20,8 @@ char *_strncat(char *dest, char *src, int n)
 	int proposed_src_string_length = n;
 	int destination_string_length = 0;
 	/**
-	  * int source_string_length;
-	  */
+	 * int source_string_length;
+	 */
 	for (character_counter = 0;
 			dest[character_counter] != '\0';
 			character_counter++)
@@ -34,12 +34,9 @@ char *_strncat(char *dest, char *src, int n)
 	 * source_string_length++;
 	 */
 	for (character_counter = 0;
-			(character_counter < proposed_src_string_length
-			 && src[character_counter] != '\0');
+			(character_counter < proposed_src_string_length)
+			&& (src[character_counter] != '\0');
 			character_counter++)
 		dest[destination_string_length + character_counter] = src[character_counter];
-
-	if (dest[destination_string_length + character_counter] < n)
-		dest[destination_string_length + n] = '\0';
 	return (dest);
 }
