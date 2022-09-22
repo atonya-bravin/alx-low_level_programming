@@ -39,5 +39,7 @@ char *_strncat(char *dest, char *src, int n)
 			character_counter++)
 		dest[destination_string_length + character_counter] = src[character_counter];
 
+	if (dest[destination_string_length + character_counter] < n)
+		dest[destination_string_length + character_counter + 1] = '\0';
 	return (dest);
 }
