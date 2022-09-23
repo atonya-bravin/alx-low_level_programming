@@ -40,7 +40,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest[destination_string_length + character_counter] = src[character_counter];
 
 	if (destination_string_length <= n)
-		dest[destination_string_length + n + 1] = '\n';
+		dest[destination_string_length + n + 1] = '\0';
 
 	return (dest);
 }
