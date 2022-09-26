@@ -26,8 +26,7 @@ char *_strchr(char *s, char c)
 	{
 		if (target_string[character_counter] == target_character)
 		{
-			(returning_pointer = &target_string[character_counter]);
-			break;
+			return (&target_string[character_counter]);
 		}
 	}
 	return (returning_pointer);
