@@ -31,7 +31,10 @@ char *_strchr(char *s, char c)
 		}
 		if (target_string[character_counter] != target_character &&
 				(target_string[character_counter + 1] == '\0'))
+		{
 			(returning_pointer = NULL);
+			break;
+		}
 	}
 	return (returning_pointer);
 }
