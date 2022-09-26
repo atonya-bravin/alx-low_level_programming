@@ -23,8 +23,6 @@ char *cap_string(char *a)
 	for (character_counter = 0;
 			target_string_pointer[character_counter] != '\0'; character_counter++)
 	{
-		if (target_string_pointer[character_counter - 1] == '\t')
-			target_string_pointer[character_counter - 1] = ' ';
 		if (((int)target_string_pointer[character_counter] <= 90 &&
 				 (int)target_string_pointer[character_counter] >= 65) ||
 				((int)target_string_pointer[character_counter] <= 122 &&
