@@ -26,12 +26,12 @@ char *_strchr(char *s, char c)
 	{
 		if (target_string[character_counter] == target_character)
 		{
-			returning_pointer = &target_string[character_counter];
+			(returning_pointer = &target_string[character_counter]);
 			break;
 		}
 		if (target_string[character_counter] != target_character &&
 				(target_string[character_counter + 1] == '\0'))
-			returning_pointer = NULL;
+			(returning_pointer = NULL);
 	}
 	return (returning_pointer);
 }
