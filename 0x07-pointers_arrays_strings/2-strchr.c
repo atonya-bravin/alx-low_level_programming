@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 {
 	char *target_string = s;
 	char target_character = c;
-	char *returning_pointer;
+	char *returning_pointer = NULL;
 	int character_counter;
 
 	for (character_counter = 0;
@@ -27,12 +27,6 @@ char *_strchr(char *s, char c)
 		if (target_string[character_counter] == target_character)
 		{
 			(returning_pointer = &target_string[character_counter]);
-			break;
-		}
-		if (target_string[character_counter] != target_character &&
-				(target_string[character_counter + 1] == '\0'))
-		{
-			(returning_pointer = NULL);
 			break;
 		}
 	}
