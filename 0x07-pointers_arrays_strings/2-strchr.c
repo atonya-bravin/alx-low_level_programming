@@ -19,7 +19,7 @@ char *_strchr(char *s, char c)
 	char *target_string = s;
 	char target_character = c;
 	int character_counter;
-	
+
 	for (character_counter = 0;
 			target_string[character_counter] != '\0'; character_counter++)
 	{
