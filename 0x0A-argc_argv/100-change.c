@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", number_of_change_cents);
 		}
 		else
-			printf("%d\n", 0);
+			printf("0\n");
 	}
 	if (argc != 2)
 	{
