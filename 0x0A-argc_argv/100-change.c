@@ -24,6 +24,8 @@ int main(int argc, char *argv[])
 	if (argc == 2)
 	{
 		remaining_cents = atoi(argv[1]);
+		if (remaining_cents > 0)
+		{
 		while (remaining_cents > 0)
 		{
 			if ((remaining_cents % 25) == 0)
@@ -41,6 +43,9 @@ int main(int argc, char *argv[])
 
 		}
 		printf("%d\n", number_of_change_cents);
+		}
+		else
+			printf("%d\n", 0);
 	}
 	if (argc != 2)
 	{
