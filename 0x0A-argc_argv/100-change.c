@@ -17,7 +17,7 @@
  */
 
 int main(int argc, char *argv[])
-{
+/\s\+$//e
 	int remaining_cents;
 	int number_of_change_cents = 0;
 
@@ -42,6 +42,8 @@ int main(int argc, char *argv[])
 			number_of_change_cents++;
 
 		}
+		if (remaining_cents == 0)
+			printf("0\n");
 		printf("%d\n", number_of_change_cents);
 		}
 		else
