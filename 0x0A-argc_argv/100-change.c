@@ -27,30 +27,18 @@ int main(int argc, char *argv[])
 		while (remaining_cents > 0)
 		{
 			if ((remaining_cents % 25) == 0)
-			{
 				remaining_cents -= 25;
-				number_of_change_cents++;
-			}
 			else if ((remaining_cents % 10) == 0)
-			{
 				remaining_cents -= 10;
-				number_of_change_cents++;
-			}
 			else if ((remaining_cents % 5) == 0)
-			{
 				remaining_cents -= 5;
-				number_of_change_cents++;
-			}
 			else if ((remaining_cents % 2) == 0)
-			{
 				remaining_cents -= 2;
-				number_of_change_cents++;
-			}
 			else if ((remaining_cents % 1) == 0)
-			{
 				remaining_cents -= 1;
-				number_of_change_cents++;
-			}
+
+			number_of_change_cents++;
+
 		}
 		printf("%d\n", number_of_change_cents);
 	}
@@ -59,6 +47,5 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	return (0);
 }
