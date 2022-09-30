@@ -16,21 +16,26 @@
 int main(int argc, char *argv[])
 {
 	int number_counter = 1;
+	int character_counter;
 	int sum = 0;
-	char *zero_string = "0";
 
 	if (argc > 1)
 	{
 		for (; number_counter < argc; number_counter++)
 		{
-			if (argv[number_counter] != zero_string &&
-					(atoi(argv[number_counter])) == 0)
+			for (character_counter = 0; argv[number_counter][character_counter] != '\0';
+					character_counter++)
 			{
-				printf("Error\n");
-				return (0);
+				if (((int)(argv[number_counter][character_counter]) >= 97 &&
+						(int)(argv[number_counter][character_counter]) < 122) ||
+						((int)(argv[number_counter][character_counter]) >= 65 &&
+						(int)(argv[number_counter][character_counter]) < 90))
+				{
+					printf("Error\n");
+					return (0);
+				}
 			}
-			else
-				sum += (atoi(argv[number_counter]));
+			sum += (atoi(argv[number_counter]));
 		}
 	}
 	else
