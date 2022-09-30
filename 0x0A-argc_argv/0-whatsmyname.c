@@ -3,7 +3,8 @@
 /**
  * main - prints the name of a program followe by a new line
  *
- * Description: "takes in arguments from the command line and prints the first argument"
+ * Description: "takes in arguments from the command line and
+ * prints the first argument"
  *
  * @argc: takes in the number of arguments passed in from command line
  * @argv: agument array holding arguments from command line
