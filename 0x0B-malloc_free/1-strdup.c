@@ -38,8 +38,6 @@ char *_strdup(char *str)
 	copy_string_pointer[character_counter + 1] = '\0';
 
 	if (original_string_pointer == NULL)
-		return (NULL);
-	if (string_length == 0)
 		return (NULL);	
 
 	return (copy_string_pointer);
