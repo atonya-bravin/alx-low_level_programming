@@ -37,6 +37,8 @@ char *_strdup(char *str)
 		character_counter++;
 	}
 
+	if (string_length == 1)
+		return (copy_string_pointer);
 	copy_string_pointer[character_counter + 1] = '\0';
 
 	if (copy_string_pointer == NULL)
