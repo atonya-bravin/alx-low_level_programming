@@ -24,5 +24,5 @@ char *create_array(unsigned int size, char c)
 		for (; bytes_counter < size; bytes_counter++)
 			character_pointer[bytes_counter] = c;
 	}
-	return (&character_pointer[0]);
+	return (character_pointer);
 }
