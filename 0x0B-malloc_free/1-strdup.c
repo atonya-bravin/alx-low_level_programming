@@ -39,6 +39,8 @@ char *_strdup(char *str)
 
 	if (original_string_pointer == NULL)
 		return (NULL);
+	if (string_length == 0)
+		return (NULL);	
 
 	return (copy_string_pointer);
 }
