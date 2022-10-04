@@ -16,6 +16,8 @@ char *create_array(unsigned int size, char c)
 	char *character_pointer = (malloc(byte_size));
 	unsigned int bytes_counter = 0;
 
+	if (character_pointer == NULL)
+		return (NULL);
 	if (size == 0)
 		return ('\0');
 
