@@ -33,17 +33,17 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	char_counter = 0;
 	second_str_counter = 0;
-	while (first_pointer[char_counter] == '\0')
+	while (first_pointer[char_counter] != '\0')
 	{
 		new_string_pointer[char_counter] = first_pointer[char_counter];
 		char_counter++;
 	}
-	while (second_pointer[second_str_counter] == '\0')
+	while (second_pointer[second_str_counter] != '\0')
 	{
 		new_string_pointer[char_counter] = second_pointer[second_str_counter];
 		char_counter++;
 		second_str_counter++;
 	}
-	new_string_pointer[total_bytes] = '\0';
+	new_string_pointer[total_bytes + 1] = '\0';
 	return (new_string_pointer);
 }
