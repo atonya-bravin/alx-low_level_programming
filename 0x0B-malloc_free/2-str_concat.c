@@ -44,6 +44,6 @@ char *str_concat(char *s1, char *s2)
 		char_counter++;
 		second_str_counter++;
 	}
-	new_string_pointer[total_bytes] = '\0';
+	new_string_pointer[total_bytes + 1] = '\0';
 	return (new_string_pointer);
 }
