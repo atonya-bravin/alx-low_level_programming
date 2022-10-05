@@ -28,22 +28,21 @@ char *str_concat(char *s1, char *s2)
 		total_bytes++;
 	for (char_counter = 0; s2[char_counter] != '\0'; char_counter++)
 		total_bytes++;
-	new_string_pointer = malloc(sizeof(char) * (total_bytes + 1));
+	new_string_pointer = malloc(sizeof(char) * (total_bytes));
 	if (new_string_pointer == NULL)
 		return (NULL);
 	char_counter = 0;
 	second_str_counter = 0;
-	while (first_pointer[char_counter])
+	while (first_pointer[char_counter] == '\0')
 	{
 		new_string_pointer[char_counter] = first_pointer[char_counter];
 		char_counter++;
 	}
-	while (second_pointer[second_str_counter])
+	while (second_pointer[second_str_counter] == '\0')
 	{
 		new_string_pointer[char_counter] = second_pointer[second_str_counter];
 		char_counter++;
 		second_str_counter++;
 	}
-	new_string_pointer[total_bytes + 1] = '\0';
 	return (new_string_pointer);
 }
