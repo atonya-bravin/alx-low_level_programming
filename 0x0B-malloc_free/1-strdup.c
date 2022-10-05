@@ -21,6 +21,7 @@ char *_strdup(char *str)
 
 	if (original_string_pointer == NULL)
 		return (NULL);
+
 	while (original_string_pointer[character_counter] != '\0')
 		character_counter++;
 
@@ -39,8 +40,6 @@ char *_strdup(char *str)
 		character_counter++;
 	}
 
-	if (string_length == 0)
-		return (NULL);
 	copy_string_pointer[character_counter + 1] = '\0';
 
 	return (copy_string_pointer);
