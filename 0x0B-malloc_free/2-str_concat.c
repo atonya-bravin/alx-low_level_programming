@@ -29,8 +29,7 @@ char *str_concat(char *s1, char *s2)
 		total_bytes++;
 	for (char_counter = 0; s2[char_counter] != '\0'; char_counter++)
 		total_bytes++;
-	new_string_pointer = malloc(sizeof(char) * total_bytes);
-
+	new_string_pointer = malloc(sizeof(char) * (total_bytes + 1));
 	if (new_string_pointer == NULL)
 		new_string_pointer[0] = '\0';
 	char_counter = 0;
@@ -46,5 +45,6 @@ char *str_concat(char *s1, char *s2)
 		char_counter++;
 		second_str_counter++;
 	}
+	new_string_pointer[total_bytes + 1] = '\0';
 	return (new_string_pointer);
 }
