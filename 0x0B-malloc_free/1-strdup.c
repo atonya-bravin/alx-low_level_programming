@@ -28,6 +28,8 @@ char *_strdup(char *str)
 
 	copy_string_pointer = (char *)malloc(sizeof(char) * (string_length + 1));
 
+	if (copy_string_pointer == NULL)
+		return (NULL);
 	character_counter = 0;
 
 	while (character_counter < string_length)
@@ -40,9 +42,6 @@ char *_strdup(char *str)
 	if (string_length == 0)
 		return (NULL);
 	copy_string_pointer[character_counter + 1] = '\0';
-
-	if (copy_string_pointer == NULL)
-		return (NULL);
 
 	return (copy_string_pointer);
 }
