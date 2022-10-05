@@ -21,10 +21,15 @@ char *str_concat(char *s1, char *s2)
 	int second_str_counter;
 
 	if (first_pointer == NULL)
-		first_pointer[0] = "";
+	{
+		first_pointer = malloc(sizeof(char) * 1);
+		first_pointer[0] = '\0';
+	}
 	if (second_pointer == NULL)
-		second_pointer[0] = "";
-
+	{
+		second_pointer = malloc(sizeof(char) * 1);
+		second_pointer[0] = '\0';
+	}
 	for (char_counter = 0; s1[char_counter] != '\0'; char_counter++)
 		total_bytes++;
 	for (char_counter = 0; s2[char_counter] != '\0'; char_counter++)
