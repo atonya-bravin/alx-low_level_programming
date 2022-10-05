@@ -20,13 +20,19 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	if (grid == NULL)
+	{
+		free(grid);
 		return (NULL);
+	}
 
 	for (column_counter = 0; column_counter < width; column_counter++)
 	{
 		grid[column_counter] = malloc(sizeof(int) * height);
 		if (grid[column_counter] == NULL)
+		{
+			free(grid[column_counter]);
 			return (NULL);
+		}
 	}
 
 	for (column_counter = 0; column_counter < width; column_counter++)
