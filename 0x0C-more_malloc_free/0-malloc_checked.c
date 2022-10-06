@@ -18,7 +18,7 @@ void *malloc_checked(unsigned int b)
 	
 	space_pointer = malloc(b);
 	
-	if (space_pointer == 0)
+	if (space_pointer == NULL)
 		exit(98);
 	else
 		return(space_pointer);
