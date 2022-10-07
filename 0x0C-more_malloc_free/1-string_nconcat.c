@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		new_string_pointer[char_counter] = s1[char_counter];
 		char_counter++;
 	}
-	while (char_counter < total_string_len)
+	while (char_counter < total_string_len - 1)
 	{
 		new_string_pointer[char_counter] = s2[sec_string_char_counter];
 		char_counter++;
