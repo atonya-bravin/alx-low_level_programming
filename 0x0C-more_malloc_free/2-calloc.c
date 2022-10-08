@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 
 /**
@@ -26,7 +27,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (array_allocation == NULL)
 		return (NULL);
 
-	array_allocation = 0;
+	memset(array_allocation, 0, number_of_members);
 	/**
 	for (members_counter = 0; members_counter < number_of_members;
 			members_counter++)
