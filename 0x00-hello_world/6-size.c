@@ -17,7 +17,7 @@ int main(void)
 	long long doubleLongInteger;
 
 	printf("Size of a char: %lu byte(s)\n", sizeof(character));
-	printf("Size of a int: %lu byte(s)\n", sizeof(integer));
+	printf("Size of an int: %lu byte(s)\n", sizeof(integer));
 	printf("Size of a long int: %lu byte(s)\n", sizeof(longInteger));
 	printf("Size of a long long int: %lu byte(s)\n", sizeof(doubleLongInteger));
 	printf("Size of a float: %lu byte(s)\n", sizeof(floating));
