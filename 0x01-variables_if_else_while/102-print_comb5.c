@@ -11,16 +11,17 @@
 
 int main(void)
 {
-	int first_number;
+	int first_number = 0; 
 	int second_number;
+	int second_number_holder = 1;
 	int frst_first_number_cmb;
 	int sec_first_number_cmb;
 	int frst_second_number_cmb;
 	int sec_second_number_cmb;
-
-	for (first_number = 0; first_number < 99; first_number++)
+	
+      	for (first_number = 0; first_number < 99; first_number++)
 	{
-		for (second_number = 1; second_number < 100; second_number++)
+		for (second_number = second_number_holder; second_number < 100; second_number++)
 		{
 			frst_first_number_cmb = ((first_number - (first_number % 10)) / 10);
 			sec_first_number_cmb = first_number % 10;
@@ -40,6 +41,7 @@ int main(void)
 				putchar(' ');
 			}
 		}
+		second_number_holder++;
 	}
 	return (0);
 }
