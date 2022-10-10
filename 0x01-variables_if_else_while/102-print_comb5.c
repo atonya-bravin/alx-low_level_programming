@@ -13,33 +13,31 @@ int main(void)
 {
 	int first_number;
 	int second_number;
-	int third_number;
-	int fourth_number;
+	int frst_first_number_cmb;
+	int sec_first_number_cmb;
+	int frst_second_number_cmb;
+	int sec_second_number_cmb;
 
-	for (first_number = 0; first_number < 10; first_number++)
+	for (first_number = 0; first_number < 99; first_number++)
 	{
-		for (second_number = 0; second_number < 9; second_number++)
+		for (second_number = 1; second_number < 100; second_number++)
 		{
-			for (third_number = 0; third_number < 10; third_number++)
+			frst_first_number_cmb = ((first_number - (first_number % 10)) / 10);
+			sec_first_number_cmb = first_number % 10;
+			frst_second_number_cmb = ((second_number - (second_number % 10)) / 10);
+			sec_second_number_cmb = second_number % 10;
+
+			putchar(frst_first_number_cmb + '0');
+			putchar(sec_first_number_cmb + '0');
+			putchar(' ');
+			putchar(frst_second_number_cmb + '0');
+			putchar(sec_second_number_cmb + '0');
+			if (first_number == 98 && second_number == 99)
+				putchar('\n');
+			else
 			{
-				for (fourth_number = 0; fourth_number < 10; fourth_number++)
-				{
-					putchar(first_number + '0');
-					putchar(second_number + '0');
-					putchar(' ');
-					putchar(third_number + '0');
-					putchar(fourth_number + '0');
-					if (first_number == 9 && second_number == 8 && third_number == 9 && fourth_number == 9)
-					{
-						putchar('\n');
-						return (0);
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
