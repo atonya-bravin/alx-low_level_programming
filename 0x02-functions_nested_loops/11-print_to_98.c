@@ -16,10 +16,10 @@ void print_to_98(int n)
 {
 	int start_number = n;
 	int end_number = 98;
-
+	
 	while (start_number <= end_number)
 	{
-		 if (start_number < end_number)
+		 if (start_number <= end_number)
 		 {
 			if (start_number < 10)
 			{
