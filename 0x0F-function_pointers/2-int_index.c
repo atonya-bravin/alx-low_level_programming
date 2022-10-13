@@ -21,10 +21,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 	(void) array;
 	if (size <= 0)
 		return (-1);
-	for (; elements_counter < size; elements_counter++)
+	if (cmp != NULL  && array != NULL)
 	{
-		if (cmp(array[elements_counter]) != 0)
-			return (elements_counter);
+		for (; elements_counter < size; elements_counter++)
+		{
+			if (cmp(array[elements_counter]) != 0)
+				return (elements_counter);
+		}
 	}
 	return (-1);
 }
