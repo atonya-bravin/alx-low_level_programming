@@ -10,20 +10,20 @@
 
 int main(int argc, char *argv[])
 {	
-	char *op_arr[] = {"+", "-", "/", "%", "*"};
-	
-	if (argc < 4)
+	char *op;
+       	op = argv[2];
+
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2][0] != op_arr[0][0] && argv[2][0] != op_arr[1][0] && argv[2][0] != op_arr[2][0] &&
-			argv[2][0] != op_arr[3][0] && argv[2][0] != op_arr[4][0])
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (((argv[2][0] == op_arr[2][0]) && (argv[1][0] == '0')) || ((argv[2][0] == op_arr[3][0]) && (argv[1][0] == '0')))
+	if (((*op == '/') && (argv[1][0] == '0')) || ((*op == '%') && (argv[1][0] == '0')))
 	{
 		printf("Error\n");
 		exit(100);
