@@ -3,7 +3,7 @@
 /**
  * print_name - prints name
  *
- i* @name: the name to be printed
+ * @name: the name to be printed
  * @f: function pointer to a passed function
  *
  * Return: Always Nothing
