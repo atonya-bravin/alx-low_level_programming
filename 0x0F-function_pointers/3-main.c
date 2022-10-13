@@ -5,11 +5,14 @@
 /**
  * main - prints the appropriate outcome
  *
+ * @argc: number of elements in our agument list
+ * @argv: argument list
+ *
  * Return: 0 (success)
  */
 
 int main(int argc, char *argv[])
-{	
+{
 	int num1, num2;
 	char *op;
 

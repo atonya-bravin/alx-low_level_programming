@@ -4,14 +4,12 @@
  * get_op_func - selects the correct function to perform the operation
  *
  * @s: the operator of the intended operation
- * @a: first number
- * @b: second number
  *
  * Return: pointer to the appropriate function
  *
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},

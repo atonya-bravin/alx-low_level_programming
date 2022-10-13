@@ -11,7 +11,7 @@
 
 int op_add(int a, int b)
 {
-	int first_number = a; 
+	int first_number = a;
 	int second_number = b;
 
 	return (first_number + second_number);
