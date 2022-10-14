@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 
 	va_start(argument_list, format);
 	if (format == NULL)
-		printf("nil");
+		printf("(nil)");
 	while (format != NULL && format[c] != '\0')
 	{
 		switch (format[c])
