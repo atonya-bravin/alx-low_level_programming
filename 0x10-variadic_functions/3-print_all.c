@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 				case 'f':
 					printf("%f", va_arg(argument_list, double));
 					break;
-				case 's':
+				default:
 					printf("%s", va_arg(argument_list, char*));
 					break;
 			}
