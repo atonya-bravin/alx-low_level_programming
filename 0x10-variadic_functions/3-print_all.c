@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 /**
  * print_all - prints anything
@@ -14,12 +15,11 @@
 void print_all(const char * const format, ...)
 {
 	int c = 0;
-	bool break_out = false;
 	char *string_content;
 	va_list argument_list;
 
 	va_start(argument_list, format);
-	while (format != NULL && (!break_out))
+	if (format)
 	{
 		while (format[c] != '\0')
 		{
@@ -37,23 +37,18 @@ void print_all(const char * const format, ...)
 				case 's':
 					string_content = va_arg(argument_list, char*);
 					if (string_content == NULL)
-					{
-						printf("(nil)");
-						break;
-					}
+						string_content = "(nil)";
 					printf("%s", string_content);
 					break;
 				default:
-					break;
+					c++;
+					continue;
 			}
-			if (format[c + 1] != '\0')
-				printf(", ");
-			switch (format[c + 1])
+			while (format[c + 1] != '\0')
 			{
-				case '\0':
-					break_out = true;
-					break;
-			}	
+				printf(", ");
+				break;
+			}
 			c++;
 		}
 	}
