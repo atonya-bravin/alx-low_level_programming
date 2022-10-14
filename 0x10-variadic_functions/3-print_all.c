@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 				{
 					printf("(nil)");
 					break;
-				}				
+				}
 				printf("%s", string_content);
 				break;
 			default:
