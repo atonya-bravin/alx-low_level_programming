@@ -14,16 +14,16 @@
 
 void print_all(const char * const format, ...)
 {
-	int c = 0;
+	int char_counter = 0;
 	char *string_content;
 	va_list argument_list;
 
 	va_start(argument_list, format);
 	if (format)
 	{
-		while (format[c] != '\0')
+		while (format[char_counter] != '\0')
 		{
-			switch (format[c])
+			switch (format[char_counter])
 			{
 				case 'c':
 					printf("%c", va_arg(argument_list, int));
@@ -41,15 +41,15 @@ void print_all(const char * const format, ...)
 					printf("%s", string_content);
 					break;
 				default:
-					c++;
+					char_counter++;
 					continue;
 			}
-			while (format[c + 1] != '\0')
+			while (format[char_counter + 1] != '\0')
 			{
 				printf(", ");
 				break;
 			}
-			c++;
+			char_counter++;
 		}
 	}
 	va_end(argument_list);
