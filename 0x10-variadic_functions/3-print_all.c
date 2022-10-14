@@ -14,6 +14,7 @@
 void print_all(const char * const format, ...)
 {
 	int c = 0;
+	char *string_content;
 	va_list argument_list;
 
 	va_start(argument_list, format);
