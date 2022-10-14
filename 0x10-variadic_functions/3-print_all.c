@@ -17,29 +17,29 @@ void print_all(const char * const format, ...)
 	va_list argument_list;
 
 	va_start(argument_list, format);
+	if (format == NULL)
+		printf("nil");
 	while (format != NULL && format[c] != '\0')
 	{
-		if (format[c] == 'c' || format[c] == 'i' ||
-				format[c] == 'f' || format[c] == 's')
+		switch (format[c])
 		{
-			switch (format[c])
-			{
-				case 'c':
-					printf("%c", va_arg(argument_list, int));
-					break;
-				case 'i':
-					printf("%d", va_arg(argument_list, int));
-					break;
-				case 'f':
-					printf("%f", va_arg(argument_list, double));
-					break;
-				default:
-					printf("%s", va_arg(argument_list, char*));
-					break;
-			}
-			if (format[c + 1] != '\0')
-				printf(", ");
+			case 'c':
+				printf("%c", va_arg(argument_list, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(argument_list, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(argument_list, double));
+				break;
+			case 's':
+				printf("%s", va_arg(argument_list, char*));
+				break;
+			default:
+				break;
 		}
+		if (format[c + 1] != '\0')
+			printf(", ");
 		c++;
 	}
 	va_end(argument_list);
