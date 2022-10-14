@@ -14,38 +14,48 @@
 void print_all(const char * const format, ...)
 {
 	int c = 0;
+	bool break_out = false;
 	char *string_content;
 	va_list argument_list;
 
 	va_start(argument_list, format);
-	while (format[c] != '\0')
+	while (format != NULL && (!break_out))
 	{
-		switch (format[c])
+		while (format[c] != '\0')
 		{
-			case 'c':
-				printf("%c", va_arg(argument_list, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(argument_list, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(argument_list, double));
-				break;
-			case 's':
-				string_content = va_arg(argument_list, char*);
-				if (string_content == NULL)
-				{
-					printf("(nil)");
+			switch (format[c])
+			{
+				case 'c':
+					printf("%c", va_arg(argument_list, int));
 					break;
-				}
-				printf("%s", string_content);
-				break;
-			default:
-				break;
+				case 'i':
+					printf("%d", va_arg(argument_list, int));
+					break;
+				case 'f':
+					printf("%f", va_arg(argument_list, double));
+					break;
+				case 's':
+					string_content = va_arg(argument_list, char*);
+					if (string_content == NULL)
+					{
+						printf("(nil)");
+						break;
+					}
+					printf("%s", string_content);
+					break;
+				default:
+					break;
+			}
+			if (format[c + 1] != '\0')
+				printf(", ");
+			switch (format[c + 1])
+			{
+				case '\0':
+					break_out = true;
+					break;
+			}	
+			c++;
 		}
-		if (format[c + 1] != '\0')
-			printf(", ");
-		c++;
 	}
 	va_end(argument_list);
 	printf("\n");
