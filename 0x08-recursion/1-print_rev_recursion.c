@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 #include <stdio.h>
 
 /**
@@ -15,18 +14,15 @@
 
 void _print_rev_recursion(char *s)
 {
-	int string_length = strlen(s);
-	char *string_pointer = s;
+	int string_length = 0;
+	int char_counter = 0;
 
-	printf("%d-", string_length);
+	for (char_counter = 0; s[char_counter] != '\0'; char_counter++)
+		string_length++;
 
-	if (string_length != 0)
+
+	for (char_counter = 0; char_counter <= string_length; string_length--)
 	{
-		_putchar(string_pointer[string_length - 1]);
-		string_pointer[string_length - 1] = '\0';
-		printf("%d-", string_length);
-		_print_rev_recursion(&string_pointer[0]);
+		printf("%c", s[string_length]);
 	}
-	else
-		return;
 }
