@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * _print_rev_recursion - prints a string in reverse
@@ -14,15 +16,12 @@
 
 void _print_rev_recursion(char *s)
 {
-	int string_length = 0;
-	int char_counter = 0;
+	char *dest_string;
+	char *src_string = s;
 
-	for (char_counter = 0; s[char_counter] != '\0'; char_counter++)
-		string_length++;
-
-
-	for (char_counter = 0; char_counter <= string_length; string_length--)
-	{
-		printf("%c", s[string_length]);
-	}
+	dest_string = malloc(sizeof(char) * strlen(src_string));
+	strncpy(dest_string, src_string,  (strlen(src_string) - 1));
+	printf("%c", src_string[(strlen(dest_string))]);
+	if (strlen(dest_string) != 0)
+		_print_rev_recursion(dest_string);
 }
