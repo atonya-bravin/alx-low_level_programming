@@ -19,9 +19,12 @@ void _print_rev_recursion(char *s)
 	char *dest_string;
 	char *src_string = s;
 
-	dest_string = malloc(sizeof(char) * strlen(src_string));
-	strncpy(dest_string, src_string,  (strlen(src_string) - 1));
-	printf("%c", src_string[(strlen(dest_string))]);
-	if (strlen(dest_string) != 0)
-		_print_rev_recursion(dest_string);
+	if(src_string)
+	{
+		dest_string = malloc(sizeof(char) * strlen(src_string));
+		strncpy(dest_string, src_string,  (strlen(src_string) - 1));
+		printf("%c", src_string[(strlen(dest_string))]);
+		if (strlen(dest_string) != 0)
+			_print_rev_recursion(dest_string);
+	}
 }
