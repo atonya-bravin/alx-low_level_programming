@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (!newNode)
 	{
 		free(newNode);
-		exit(0);
+		exit(-1);
 	}
 	for (char_ctr = 0; str != NULL && str[char_ctr] != '\0'; char_ctr++)
 	{
@@ -32,7 +32,7 @@ list_t *add_node(list_t **head, const char *str)
 		if (!(*head))
 		{
 			free(*head);
-			exit(0);
+			exit(-1);
 		}
 		(*head)->str = strdup(str);
 		(*head)->len = string_length;
