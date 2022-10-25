@@ -3,7 +3,7 @@
 /**
  * list_len - calculates and returns the number of elements in a linked list
  *
- * @h - the linked list we are calculating the number of elements
+ * @h: the linked list we are calculating the number of elements
  *
  * Return: the number of elements in the linked list.
  */
