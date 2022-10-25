@@ -17,7 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int string_length = 0;
 	int char_ctr = 0;
 
-	if (!newNode)
+	if (newNode == NULL)
 	{
 		free(newNode);
 		return (NULL);
@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (*head == NULL)
 	{
 		*head = malloc(sizeof(list_t));
-		if (!(*head))
+		if ((*head) == NULL)
 		{
 			free(*head);
 			return (NULL);
