@@ -17,33 +17,45 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int string_length = 0;
 	int char_counter = 0;
 
-	while (str != NULL && str[char_counter] != '\0')
+	if (newNode)
 	{
-		string_length++;
-		char_counter++;
-	}
-
-	if (*head == NULL)
-	{
-		*head = malloc(sizeof(list_t));
-		(*head)->str = strdup(str);
-		(*head)->len = string_length;
-	}
-	else
-	{
-		if (str == NULL)
+		while (str != NULL && str[char_counter] != '\0')
 		{
-			newNode->str = "(nil)";
-			newNode->len = 0;
+			string_length++;
+			char_counter++;
+		}
+
+		if (*head == NULL)
+		{
+			*head = malloc(sizeof(list_t));
+			if (*head)
+			{
+				(*head)->str = strdup(str);
+				(*head)->len = string_length;
+			}
+			else
+			{
+				free(*head);
+				exit (0);
+			}
 		}
 		else
 		{
-			newNode->str = strdup(str);
-			newNode->len = string_length;
+			if (str == NULL)
+			{
+				newNode->str = "(nil)";
+				newNode->len = 0;
+			}
+			else
+			{
+				newNode->str = strdup(str);
+				newNode->len = string_length;
+			}
+			newNode->next = *head;
+			*head = newNode;
 		}
-		newNode->next = *head;
-		*head = newNode;
 	}
+	free(newNode);
 
 
 	return (*head);
