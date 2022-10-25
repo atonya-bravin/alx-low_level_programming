@@ -17,7 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int string_length = 0;
 	int char_counter = 0;
 
-	while (str[char_counter] != '\0')
+	while (str != NULL && str[char_counter] != '\0')
 	{
 		string_length++;
 		char_counter++;
