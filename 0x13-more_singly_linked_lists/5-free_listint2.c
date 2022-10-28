@@ -39,6 +39,6 @@ void free_listint2(listint_t **head)
 	{
 		*head = malloc(sizeof(listint_t));
 		free(*head);
-		head = NULL;
+		*head = NULL;
 	}
 }
