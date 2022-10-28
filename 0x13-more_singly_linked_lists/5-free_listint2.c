@@ -35,10 +35,4 @@ void free_listint2(listint_t **head)
 		free(current_free_element);
 		*head = NULL;
 	}
-	else
-	{
-		*head = malloc(sizeof(listint_t));
-		free(*head);
-		*head = NULL;
-	}
 }
