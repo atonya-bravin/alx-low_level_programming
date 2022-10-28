@@ -17,19 +17,22 @@ void free_listint2(listint_t **head)
 	listint_t *auxilary_node;
 	listint_t *newNode = malloc(sizeof(listint_t));
 
-	newNode->n = (*head)->n;
-	newNode->next = (*head)->next;
-	(*head)->next = newNode;
-
-	current_free_element = *head;
-
-
-	while (current_free_element != NULL)
+	if(head != NULL)
 	{
-		auxilary_node = current_free_element;
-		current_free_element = current_free_element->next;
-		free(auxilary_node);
+		newNode->n = (*head)->n;
+		newNode->next = (*head)->next;
+		(*head)->next = newNode;
+
+		current_free_element = *head;
+
+
+		while (current_free_element != NULL)
+		{
+			auxilary_node = current_free_element;
+			current_free_element = current_free_element->next;
+			free(auxilary_node);
+		}
+		free(current_free_element);
+		*head = NULL;
 	}
-	free(current_free_element);
-	*head = NULL;
 }
