@@ -17,7 +17,7 @@ void free_listint2(listint_t **head)
 	listint_t *auxilary_node;
 	listint_t *newNode = malloc(sizeof(listint_t));
 
-	if(head != NULL)
+	if (head != NULL)
 	{
 		newNode->n = (*head)->n;
 		newNode->next = (*head)->next;
@@ -34,5 +34,11 @@ void free_listint2(listint_t **head)
 		}
 		free(current_free_element);
 		*head = NULL;
+	}
+	else
+	{
+		*head = malloc(sizeof(listint_t));
+		free(*head);
+		head = NULL;
 	}
 }
