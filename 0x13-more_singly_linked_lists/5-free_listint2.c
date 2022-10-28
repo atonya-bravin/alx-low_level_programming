@@ -15,10 +15,11 @@ void free_listint2(listint_t **head)
 {
 	listint_t *current_free_element;
 	listint_t *auxilary_node;
-	listint_t *newNode = malloc(sizeof(listint_t));
+	listint_t *newNode;
 
 	if (head != NULL)
 	{
+		newNode = malloc(sizeof(listint_t));
 		newNode->n = (*head)->n;
 		newNode->next = (*head)->next;
 		(*head)->next = newNode;
