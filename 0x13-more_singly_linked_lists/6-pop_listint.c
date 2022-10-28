@@ -12,18 +12,19 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *newNode = malloc(sizeof(listint_t));
+	listint_t *auxilaryNode = *head;
+	int value = 0;
 
 	if (*head == NULL)
 		return (0);
 
 	if (*head != NULL)
 	{
-	newNode->n = (*head)->n;
-	newNode->next = (*head)->next;
-	*head = newNode->next;
+		value = (*head)->n;
+		auxilaryNode = *head;
+		*head = (*head)->next;
+		free(auxilaryNode);
 	}
-	free(newNode);
 
-	return (newNode->n);
+	return (value);
 }
