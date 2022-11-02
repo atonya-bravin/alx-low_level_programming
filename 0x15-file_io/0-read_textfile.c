@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-	
+
 	access_granted = open(filename, O_RDONLY, letters);
 
 	if (access_granted == -1)
