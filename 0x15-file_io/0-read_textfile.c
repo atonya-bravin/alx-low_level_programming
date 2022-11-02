@@ -17,9 +17,14 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int access_granted = open(filename, O_RDONLY, letters);
+	int access_granted;
 	char *character_holder = malloc(sizeof(char) * letters);
 	ssize_t number_of_read_char;
+
+	if (filename == NULL)
+		return (0);
+	
+	access_granted = open(filename, O_RDONLY, letters);
 
 	if (access_granted == -1)
 		return (0);
