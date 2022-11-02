@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	access_granted = open(filename, O_RDONLY, letters);
+	access_granted = open(filename, O_RDWR, letters);
 
 	if (access_granted == -1)
 		return (0);
@@ -35,11 +35,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (number_of_read_char == -1)
 		return (0);
 
-	number_of_wrriten_char = write(access_granted, character_holder, letters);
+	number_of_written_char = write(access_granted, character_holder, letters);
 
 	if (number_of_written_char == -1)
 		return (0);
 	if (number_of_written_char < number_of_read_char)
 		return (0);
+
+	printf("%s", character_holder);
 	return (number_of_read_char);
 }
