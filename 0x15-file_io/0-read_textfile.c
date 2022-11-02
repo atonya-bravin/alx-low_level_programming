@@ -6,7 +6,8 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints it to the
+ * POSIX standard output.
  *
  * @filename: the name of the file we want to open
  * @letters: the number of characters we should read from the file
@@ -22,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (access_granted == -1)
 		return (0);
-	
+
 	number_of_read_char = read(access_granted, character_holder, letters);
 
 	printf("%s", character_holder);
