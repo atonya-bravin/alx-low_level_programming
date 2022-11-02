@@ -20,6 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int access_granted;
 	char *character_holder = malloc(sizeof(char) * letters);
 	ssize_t number_of_read_char;
+	ssize_t number_of_written_char;
 
 	if (filename == NULL)
 		return (0);
@@ -34,6 +35,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (number_of_read_char == -1)
 		return (0);
 
-	printf("%s", character_holder);
+	number_of_wrriten_char = write(access_granted, character_holder, letters);
+
+	if (number_of_written_char == -1)
+		return (0);
+	if (number_of_written_char < number_of_read_char)
+		return (0);
 	return (number_of_read_char);
 }
