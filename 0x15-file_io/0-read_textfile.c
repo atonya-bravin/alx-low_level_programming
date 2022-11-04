@@ -57,7 +57,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	close(access_granted);
 	access_granted = open("/dev/tty", O_WRONLY);
-	number_of_written_char = write(access_granted, character_holder, _strlen(character_holder));
+	number_of_written_char = write(access_granted, character_holder,
+			_strlen(character_holder));
 
 	if (number_of_written_char == -1)
 		return (0);
