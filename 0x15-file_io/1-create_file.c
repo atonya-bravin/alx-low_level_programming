@@ -39,16 +39,21 @@ int create_file(const char *filename, char *text_content)
 {
 	ssize_t access_granted;
 
-	if ((filename == NULL) | (text_content == NULL))
+	if (filename == NULL) 
 		return (-1);
 
-	access_granted = open(filename, O_CREAT | O_RDWR | O_APPEND, 00600);
+	if (text_content == NULL)
+		access_granted = open(filename, O_TRUNC, 00600);
 
-	if (access_granted == -1)
-		return (-1);
+	else
+	{
+		access_granted = open(filename, O_CREAT | O_RDWR | O_APPEND, 00600);
 
-	access_granted = write(access_granted, text_content, _strlen(text_content));
+		if (access_granted == -1)
+			return (-1);
 
+		access_granted = write(access_granted, text_content, _strlen(text_content));
+	}
 	if (access_granted == -1)
 		return (-1);
 
