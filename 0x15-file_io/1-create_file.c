@@ -39,7 +39,7 @@ int create_file(const char *filename, char *text_content)
 {
 	ssize_t access_granted;
 
-	if (filename == NULL) 
+	if (filename == NULL)
 		return (-1);
 
 	if (text_content == NULL)
