@@ -62,7 +62,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (number_of_written_char == -1)
 		return (0);
-	if (number_of_written_char < number_of_read_char)
+	if (number_of_written_char > number_of_read_char)
 		return (0);
 	close(access_granted);
 	return (number_of_written_char);
