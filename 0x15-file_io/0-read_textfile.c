@@ -5,6 +5,27 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+
+/**
+ * _strlen - returns length of a string
+ *
+ * Description: takes in a string and returns its length
+ *
+ * @s: the string pointer
+ *
+ * Return: Always string length
+ *
+ */
+
+int _strlen(char *s)
+{
+	int character_counter = 0;
+
+	while (s[character_counter] != '\0')
+		character_counter++;
+	return (character_counter);
+}
+
 /**
  * read_textfile - reads a text file and prints it to the
  * POSIX standard output.
@@ -25,7 +46,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (filename == NULL)
 		return (0);
 
-	access_granted = open(filename, O_RDWR, letters);
+	access_granted = open(filename, O_RDONLY);
 
 	if (access_granted == -1)
 		return (0);
@@ -34,14 +55,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (number_of_read_char == -1)
 		return (0);
-
-	number_of_written_char = write(access_granted, character_holder, letters);
+	close(access_granted);
+	access_granted = open("/dev/tty", O_WRONLY);
+	number_of_written_char = write(access_granted, character_holder, _strlen(character_holder));
 
 	if (number_of_written_char == -1)
 		return (0);
 	if (number_of_written_char < number_of_read_char)
 		return (0);
-
-	printf("%s", character_holder);
-	return (number_of_read_char);
+	return (number_of_written_char);
 }
