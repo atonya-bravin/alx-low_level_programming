@@ -14,24 +14,18 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int array_size = size;
-	int number_of_members = nmemb;
 	char *array_allocation;
-	int members_counter;
+	unsigned int members_counter;
 
-	if (number_of_members == 0 || size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	array_allocation = malloc(array_size * number_of_members);
+	array_allocation = malloc(size * nmemb);
 
 	if (array_allocation == NULL)
 		return (NULL);
 
-	memset(array_allocation, '0', number_of_members);
-	/**
-	for (members_counter = 0; members_counter < number_of_members;
-			members_counter++)
-		array_allocation[members_counter] = '0';
-	*/
+	for (members_counter = 0; members_counter <= nmemb; members_counter++)
+		array_allocation[members_counter] = 0;
 	return (array_allocation);
 }
