@@ -26,6 +26,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	for (members_counter = 0; members_counter <= nmemb; members_counter++)
-		array_allocation[members_counter] = '\0';
+		array_allocation[members_counter] = 0;
 	return (array_allocation);
 }
