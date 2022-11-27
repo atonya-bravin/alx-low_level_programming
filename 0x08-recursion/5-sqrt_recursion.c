@@ -6,7 +6,7 @@ int find_sqrt(int number, int counter);
  * _sqrt_recursion - calculates and returns the natural squareroot of a number
  *
  * @n: the number to find squre root of
- * 
+ *
  * Return: square root (success) or -1(fail)
  */
 
@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
 }
 /**
  * find_sqrt - Calculates natural square root
- * 
+ *
  * @number: number to calculate the square root
  * @counter: iterate number
  *
