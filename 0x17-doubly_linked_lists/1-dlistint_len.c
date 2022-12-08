@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * print_dlistint - counts and returns the number of elements in a list
+ * dlistint_len - counts and returns the number of elements in a list
  *
  * @h: the head to the list
  *
