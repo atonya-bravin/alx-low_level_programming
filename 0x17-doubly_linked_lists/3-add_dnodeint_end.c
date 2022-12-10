@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint - creates  a doubly linked list and adds elements to beginning
+ * add_dnodeint_end - creates  a doubly linked list and adds elements to the end
  *
  * @head: the head of the linked list
  * @n: the value of the created node
