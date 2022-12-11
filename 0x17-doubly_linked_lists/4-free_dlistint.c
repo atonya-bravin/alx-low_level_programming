@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- * free_dlistint - frees a linked list starting from the head from left to right
+ * free_dlistint - frees a linked list starting from the head from left
+ * to right
  *
  * @head: the head of the linked list
  *
- * Return: 
+ * Return: the head to the linked list
  */
 void free_dlistint(dlistint_t *head)
 {
