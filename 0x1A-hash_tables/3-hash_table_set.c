@@ -12,7 +12,7 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	long unsigned int index = 0;
+	unsigned long int index = 0;
 	hash_node_t element;
 	hash_node_t new_array_node;
 
