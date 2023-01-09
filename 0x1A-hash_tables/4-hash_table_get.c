@@ -23,6 +23,8 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	element = ht->array[index];
 	if (element == NULL)
 		return (NULL);
+	while (strcmp(key, element->key) != 0)
+		element = element->next;
 
 	return (element->value);
 }
