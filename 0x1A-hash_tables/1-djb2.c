@@ -1,3 +1,11 @@
+/**
+ * hash_djb2 - hashing algorithm
+ *
+ * @str: the string to hash
+ *
+ * Return: the number representing a given string
+ */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
