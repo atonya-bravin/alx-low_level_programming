@@ -1,10 +1,10 @@
 #include "m.h"
 
 /**
- *  * print_school
- *   *
- *    * Return: Nothing
- *     */
+ * print_school- the main function in the file
+ *
+ * Return: Nothing
+ */
 void print_school(void)
 {
 	printf("j#0000000000000000000000000000000000000\n");
