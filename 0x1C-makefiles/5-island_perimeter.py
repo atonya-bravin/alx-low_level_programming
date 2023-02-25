@@ -17,7 +17,7 @@ def island_perimeter(grid):
                     perimeter = perimeter + 1
                 if grid[outter_index][inner_index+1] == 0:
                     perimeter = perimeter + 1
-                if outter_index < len(grid[outter_index]):
+                if outter_index < len(grid):
                     if grid[outter_index+1][inner_index] == 0:
                         perimeter = perimeter + 1
 
