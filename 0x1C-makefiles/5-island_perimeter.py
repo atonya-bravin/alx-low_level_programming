@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+""" 5-island_perimeter.py """
+
 
 def island_perimeter(grid):
+    """
+        island_perimeter: calfulates the perimeter of an island
+    """
+
     perimeter = 0;
     for outter_index in range(len(grid)):
         for inner_index in range(len(grid[outter_index])):
